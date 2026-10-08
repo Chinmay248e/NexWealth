@@ -51,6 +51,43 @@ from app.schemas.notification import (
     NotificationReadAllResponse,
 )
 
+from app.schemas.goal import (
+    GoalBase,
+    GoalCreate,
+    GoalUpdate,
+    GoalAddFunds,
+    GoalResponse,
+    GoalDeleteResponse,
+)
+from app.schemas.document import (
+    DocumentBase,
+    DocumentCreate,
+    DocumentUpdate,
+    DocumentResponse,
+    DocumentDeleteResponse,
+    DOCUMENT_TYPES,
+)
+from app.schemas.bank_statement import (
+    BankStatementBase,
+    BankStatementCreate,
+    BankStatementUpdate,
+    BankStatementResponse,
+    BankStatementDeleteResponse,
+    ParsedTransactionItem,
+    BankStatementParseResult,
+    ImportTransactionsRequest,
+    ImportTransactionsResponse,
+)
+
+from app.schemas.ai_advisor import (
+    ChatMessage,
+    AdvisorQueryRequest,
+    AdvisorInsightCard,
+    FinancialContextSummary,
+    AdvisorQueryResponse,
+    AdvisorInsightsResponse,
+)
+
 __all__ = [
     "UserBase",
     "UserCreate",
@@ -86,4 +123,35 @@ __all__ = [
     "NotificationResponse",
     "NotificationDeleteResponse",
     "NotificationReadAllResponse",
+    "GoalBase",
+    "GoalCreate",
+    "GoalUpdate",
+    "GoalAddFunds",
+    "GoalResponse",
+    "GoalDeleteResponse",
+    "DocumentBase",
+    "DocumentCreate",
+    "DocumentUpdate",
+    "DocumentResponse",
+    "DocumentDeleteResponse",
+    "DOCUMENT_TYPES",
+    "BankStatementBase",
+    "BankStatementCreate",
+    "BankStatementUpdate",
+    "BankStatementResponse",
+    "BankStatementDeleteResponse",
+    "ParsedTransactionItem",
+    "BankStatementParseResult",
+    "ImportTransactionsRequest",
+    "ImportTransactionsResponse",
+    "ChatMessage",
+    "AdvisorQueryRequest",
+    "AdvisorInsightCard",
+    "FinancialContextSummary",
+    "AdvisorQueryResponse",
+    "AdvisorInsightsResponse",
 ]
+
+
+
+

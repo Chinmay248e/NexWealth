@@ -53,6 +53,25 @@ class User(Base):
         cascade="all, delete-orphan",
         lazy="selectin",
     )
+    # Person 2 Relationships
+    goals = relationship(
+        "Goal",
+        back_populates="user",
+        cascade="all, delete-orphan",
+        lazy="selectin",
+    )
+    documents = relationship(
+        "Document",
+        back_populates="user",
+        cascade="all, delete-orphan",
+        lazy="selectin",
+    )
+    bank_statements = relationship(
+        "BankStatement",
+        back_populates="user",
+        cascade="all, delete-orphan",
+        lazy="selectin",
+    )
 
     def __repr__(self) -> str:
         return f"<User(id='{self.id}', name='{self.name}', email='{self.email}')>"

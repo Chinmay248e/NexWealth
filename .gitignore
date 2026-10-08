@@ -82,3 +82,9 @@ Thumbs.db
 .vscode/
 *.sublime-workspace
 *.sublime-project
+
+# Uploaded Files & Temporary Storage
+uploads/
+storage/
+backend/uploads/
+

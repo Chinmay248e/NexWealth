@@ -28,6 +28,11 @@ class Settings(BaseSettings):
         "http://localhost:5174",
     ]
 
+    # AI & File Storage Settings (Person 2)
+    GEMINI_API_KEY: Optional[str] = None
+    UPLOAD_DIR: str = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "uploads")
+
+
     @property
     def SQLALCHEMY_DATABASE_URI(self) -> str:
         if self.DATABASE_URL:

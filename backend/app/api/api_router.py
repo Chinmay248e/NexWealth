@@ -11,8 +11,15 @@ from app.api.investments import investment_router
 from app.api.analytics import analytics_router
 from app.api.profile import profile_router
 from app.api.notifications import notification_router
+from app.api.goals import goal_router
+from app.api.documents import document_router
+from app.api.bank_statements import bank_statement_router
+from app.api.ai_advisor import ai_advisor_router
 
 api_router = APIRouter()
+
+
+
 
 # Mount authentication endpoints under /auth
 api_router.include_router(auth_router)
@@ -40,6 +47,22 @@ api_router.include_router(profile_router)
 
 # Mount notification endpoints under /notifications (Person 3)
 api_router.include_router(notification_router)
+
+# Mount goal CRUD endpoints under /goals (Person 2)
+api_router.include_router(goal_router)
+
+# Mount document vault endpoints under /documents (Person 2)
+api_router.include_router(document_router)
+
+# Mount bank statement endpoints under /bank-statements (Person 2)
+api_router.include_router(bank_statement_router)
+
+# Mount AI advisor endpoints under /ai-advisor (Person 2)
+api_router.include_router(ai_advisor_router)
+
+
+
+
 
 @api_router.get("/health", tags=["System"])
 def health_check():

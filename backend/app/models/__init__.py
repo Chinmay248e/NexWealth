@@ -5,6 +5,9 @@ from app.models.expense import Expense, EXPENSE_CATEGORIES
 from app.models.transaction import Transaction, TRANSACTION_TYPES
 from app.models.investment import Investment
 from app.models.notification import Notification
+from app.models.goal import Goal
+from app.models.document import Document
+from app.models.bank_statement import BankStatement
 
 __all__ = [
     "Base",
@@ -16,4 +19,8 @@ __all__ = [
     "TRANSACTION_TYPES",
     "Investment",
     "Notification",
+    "Goal",
+    "Document",
+    "BankStatement",
 ]
+
